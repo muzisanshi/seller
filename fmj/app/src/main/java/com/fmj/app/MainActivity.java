@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     isCover = true;
 
                     // 定时打开扫描结果
-                    CountDownTimer timer = new CountDownTimer(10000,1000) {
+                    CountDownTimer timer = new CountDownTimer(3000,1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             Log.d("--------onTick--------","onTick");
