@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="4">
-        <ImageView
-            android:id="@+id/imageView"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ad"
-            android:scaleType="fitCenter"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="1">
-        <Button
-            android:id="@+id/order"
-            android:layout_height="wrap_content"
-            android:layout_width="130dp"
-            android:text="买单"
-            android:textSize="12pt"
-            android:textColor="#666666"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="4">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ad"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/order"
+                android:layout_height="wrap_content"
+                android:layout_width="130dp"
+                android:text="买单"
+                android:textSize="12pt"
+                android:textColor="#666666"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d0ffffff"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:SpinKit_Color="@color/colorAccent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
