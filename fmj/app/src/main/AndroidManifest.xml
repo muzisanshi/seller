@@ -20,6 +20,9 @@
         </activity>
         <activity
             android:name=".ListActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".QrcodeActivity"
             android:screenOrientation="landscape">
 
         </activity>
